@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Element</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+@import
+	url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap")
+	;
+</style>
+</head>
+
+<body>
+	<header style='position: fixed; z-index: 100; width: 100%;'>
+		<div class="topnav">
+			<a style='text-decoration: none' href="MainPage.html"><i
+				class="fa fa-home"></i> Home</a> HTML5 Elements<img alt="Logo"
+				src="Logo.png"
+				style="width: 150px; float: right; height: 50px; margin-right: 10px;">
+		</div>
+	</header>
+	<article>
+		<section id="title-section">
+			<!-- <div class="post-auth">by Ivan Lourenço Gomes | 5 min read</div> -->
+			<h1>New HTML5 Elements</h1>
+			<div class="share uppercase">
+				<span>share the post</span> <img src="Facebook_Icon.png" /> <img
+					src="Linkedin_Icon.png" />
+			</div>
+			<h2 class="uppercase">Standard Attributes</h2>
+			<p>Attributes may only be specified within start tags and must
+				never be used in end tags. HTML5 attributes are case insensitive and
+				may be written in all uppercase or mixed case, although the most
+				common convention is to stick with lowercase Standard Attributes.</p>
+			<p>accesskey : Specifies a keyboard shortcut to access an
+				element. align : Horizontally aligns tags background : Places an
+				background image behind an element bgcolor : Places a background
+				color behind an element class : Classifies an element for use with
+				Cascading Style Sheets.</p>
+			<h2 class="uppercase">Custom Attributes</h2>
+			<p></p>
+
+			<p>A new feature being introduced in HTML 5 is the addition of
+				custom data attributes Custom Attributes.</p>
+
+			<p>A custom data attribute starts with data- and would be named
+				based on your requirement.</p>
+			<p>The above code will be perfectly valid HTML5 with two custom
+				attributes called datasubject and data-level. You would be able to
+				get the values of these attributes using JavaScript APIs or CSS in
+				similar way as you get for standard attributes.</p>
+			<h2 class="uppercase">HTML5 Events</h2>
+			<p>offline : Triggers when the document goes offline onchange :
+				Triggers when an element changes onclick : Triggers on a mouse click
+				oncontextmenu : Triggers when a context menu is triggered ondrag :
+				Triggers when an element is dragged ondrop : Triggers when dragged
+				element is being dropped onfocus : Triggers when the window gets
+				focus HTML5 Events</p>
+			<h2 class="uppercase">Session Storage</h2>
+			<p>The Session Storage is designed for scenarios where the user
+				is carrying out a single transaction, but could be carrying out
+				multiple transactions in different windows at the same time Session
+				Storage.</p>
+			<h2 class="uppercase">Local Storage</h2>
+			<p>The Local Storage is designed for storage that spans multiple
+				windows, and lasts beyond the current session. In particular, Web
+				applications may wish to store megabytes of user data, such as
+				entire user-authored documents or a user's mailbox, on the client
+				side for performance reasons. Again, cookies do not handle this case
+				well, because they are transmitted with every request Local Storage.
+			</p>
+			<h2 class="uppercase">Delete Web Storage</h2>
+			<p>Storing sensitive data on local machine could be dangerous and
+				could leave a security hole. The Session Storage Data would be
+				deleted by the browsers immediately after the session gets
+				terminated. To clear a local storage setting you would need to call
+				localStorage.remove('key'); where 'key' is the key of the value you
+				want to remove. If you want to clear all settings, you need to call
+				localStorage.clear() method Delete Web Storage.</p>
+			<h2 class="uppercase">Drag and Drop Events</h2>
+			<p>dragstart :Fires when the user starts dragging of the object.
+
+				dragenter : Fired when the mouse is first moved over the target
+				element while a drag is occurring. A listener for this event should
+				indicate whether a drop is allowed over this location. If there are
+				no listeners, or the listeners perform no operations, then a drop is
+				not allowed by default. dragover :This event is fired as the mouse
+				is moved over an element when a drag is occurring. Much of the time,
+				the operation that occurs during a listener will be the same as the
+				dragenter event. drop : The drop event is fired on the element where
+				the drop was occurred at the end of the drag operation. A listener
+				would be responsible for retrieving the data being dragged and
+				inserting it at the drop location. dragend : Fires when the user
+				releases the mouse button while dragging an object Drag and Drop
+				Events.</p>
+		</section>
+	</article>
+	<script type="text/javascript">
+		var searched = localStorage.getItem("myValue");
+		if (searched !== "") {
+			let text = document.getElementById("title-section").innerHTML;
+			let re = new RegExp(searched, "gi"); // search for all instances
+			let newText = text.replace(re, `<mark>${searched}</mark>`);
+			document.getElementById("title-section").innerHTML = newText;
+		}
+		onbeforeunload = function (e) { localStorage. clear(); };
+	</script>
+</body>
+</html>

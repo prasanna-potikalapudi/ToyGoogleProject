@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Framework</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+@import
+	url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap")
+	;
+</style>
+</head>
+
+<body>
+	<header style='position: fixed; z-index: 100; width: 100%;'>
+		<div class="topnav">
+			<a style='text-decoration: none' href="MainPage.html"><i
+				class="fa fa-home"></i> Home</a> JavaScript Framework<img alt="Logo"
+				src="Logo.png"
+				style="width: 150px; float: right; height: 50px; margin-right: 10px;">
+		</div>
+	</header>
+	<article>
+		<section id="title-section">
+			<!-- <div class="post-auth">by Ivan Lourenço Gomes | 5 min read</div> -->
+			<h1 style='postion: fixed; width: 100%'>The popular Javascript
+				Framework</h1>
+			<div class="share uppercase">
+				<span>share the post</span> <img src="Facebook_Icon.png" /> <img
+					src="Linkedin_Icon.png" />
+			</div>
+			<h2 class="uppercase">Angular</h2>
+			<p>
+				Angular is the oldest of the JavaScript frameworks on this
+				list–developed by Google in 2009–boasting one of the largest
+				libraries (maintained by 1500+ GitHub contributors) for developers
+				to leverage, making it an ideal framework for developers. Formerly
+				known as AngularJS, Angular was rewritten in 2016 and is now used to
+				power Google tools like Google Docs and Gmail. It’s lighter and
+				faster than its predecessor, as its functionality has been moved
+				across multiple modules–unlike monolithic AngularJS–and uses
+				TypeScript instead of the “traditional” JavaScript, making it a
+				solid option for large, sprawling software solutions, mobile apps,
+				and Progressive Web Apps. <a href="angularConcepts.html">Angular
+					Concepts</a>
+			</p>
+			<h2 class="uppercase">React</h2>
+			<p>React is one of the most popular JavaScript frameworks, often
+				compared side-by-side with Angular (and sometimes Vue). It’s an
+				open-source JS framework, first introduced by Facebook in 2013 with
+				the goal of creating a framework that allows developers to create
+				operational applications fast and rapidly scale up or down.</p>
+
+			<p>While Angular and other technologies were already available
+				when Facebook launched ReactJS, developers using the existing
+				frameworks typically dedicated a large share of their working hours
+				writing code manually.</p>
+			<p>React’s creators sought to tackle that problem by creating a
+				solution that’s both more flexible and easier to use than Angular.
+				The framework follows component-based architecture designed to
+				simplify the problem-solving process by breaking into more
+				manageable sub-tasks.And, instead of TypeScript, React uses a unique
+				syntax called JSX, a templating language that allows developers to
+				write HTML inside JavaScript, enabling developers to compose each
+				component more efficiently.</p>
+			<h2 class="uppercase">Vue</h2>
+			<p>When it comes to big players in JavaScript frameworks, we
+				certainly couldn’t have the conversation without Vue. Vue may be the
+				new kid on the block compared to Angular and React, but that doesn’t
+				mean that it doesn’t hold its own.
+			<p>Vue is a progressive JavaScript framework designed for
+				building front-end web interfaces that was first released by Evan
+				You in 2014 after his experience of extensively using Angular while
+				working at Google.</p>
+
+			<p>You’s goal was to create a JS framework with all of the
+				advantages of Angular, but lighter and easier-to-use. In the end,
+				You created something that shares many similarities with React,
+				though it offers some unique advantages you won’t find with
+				Facebook’s framework.</p>
+
+			<p>The framework offers a template-style that looks similar to
+				Angular; it also provides the component-based props characteristic
+				of React. Vue offers a quick and easy fix for UI, applications, and
+				interactive web interface development and can even power advanced
+				single-page web apps. Vue’s Vue main advantage over React is that it
+				automatically tracks dependencies between components during
+				rendering. In turn, this means that the system automatically knows
+				which components need to be re-rendered anytime the state changes.</p>
+
+			<p>The benefit here is that developers can save a ton of
+				time–eliminating the extra steps required for optimization, allowing
+				them to focus on delivering the best possible solution.</p>
+			</p>
+		</section>
+	</article>
+	<script type="text/javascript">
+		var searched = localStorage.getItem("myValue");
+		if (searched !== "") {
+			let text = document.getElementById("title-section").innerHTML;
+			let re = new RegExp(searched, "gi"); // search for all instances
+			let newText = text.replace(re, `<mark>${searched}</mark>`);
+			document.getElementById("title-section").innerHTML = newText;
+		}
+		onbeforeunload = function (e) { localStorage. clear(); };
+	</script>
+</body>
+</html>

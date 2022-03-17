@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Angular Concepts</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+@import
+	url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap")
+	;
+</style>
+</head>
+
+<body>
+	<header style='position: fixed; z-index: 100; width: 100%;'>
+		<div class="topnav">
+			<a style='text-decoration: none' href="MainPage.html"><i
+				class="fa fa-home"></i> Home</a> Angular Concepts<img alt="Logo"
+				src="Logo.png"
+				style="width: 150px; float: right; height: 50px; margin-right: 10px;">
+		</div>
+	</header>
+	<article>
+		<section id="title-section">
+			<h1>Angular Concepts</h1>
+			<div class="share uppercase">
+				<span>share the post</span> <img src="Facebook_Icon.png" /> <img
+					src="Linkedin_Icon.png" />
+			</div>
+			<h2 class="uppercase">Components</h2>
+			<p>Every Angular application has at least one component, the root
+				component that connects a component hierarchy with the page document
+				object model (DOM). Each component defines a class that contains
+				application data and logic, and is associated with an HTML template
+				that defines a view to be displayed in a target environment. The
+				@Component() decorator identifies the class immediately below it as
+				a component, and provides the template and related
+				component-specific metadata Components.</p>
+			<h2 class="uppercase">Templates, directives, and data binding</h2>
+			<p>A template combines HTML with Angular markup that can modify
+				HTML elements before they are displayed. Template directives provide
+				program logic, and binding markup connects your application data and
+				the DOM. There are two types of data binding: Event binding lets
+				your application respond to user input in the target environment by
+				updating your application data. Property binding lets you
+				interpolate values that are computed from your application data into
+				the HTML Templates, directives, and data binding.</p>
+
+			<p>Before a view is displayed, Angular evaluates the directives
+				and resolves the binding syntax in the template to modify the HTML
+				elements and the DOM, according to your program data and logic.
+				Angular supports two-way data binding, meaning that changes in the
+				DOM, such as user choices, are also reflected in your program data.
+			</p>
+
+			Your templates can use pipes to improve the user experience by
+			transforming values for display. For example, use pipes to display
+			dates and currency values that are appropriate for a user's locale.
+			Angular provides predefined pipes for common transformations, and you
+			can also define your own pipes.
+			</p>
+			<h2 class="uppercase">Services and dependency injection</h2>
+			<p>For data or logic that isn't associated with a specific view,
+				and that you want to share across components, you create a service
+				class. A service class definition is immediately preceded by the
+				@Injectable() decorator. The decorator provides the metadata that
+				allows other providers to be injected as dependencies into your
+				class Services and dependency injection.</p>
+
+			<p>Dependency injection (DI) lets you keep your component classes
+				lean and efficient. They don't fetch data from the server, validate
+				user input, or log directly to the console; they delegate such tasks
+				to services.</p>
+			<h2 class="uppercase">Routing</h2>
+			<p>The Angular Router NgModule provides a service that lets you
+				define a navigation path among the different application states and
+				view hierarchies in your application. It is modeled on the familiar
+				browser navigation conventions Routing Enter a URL in the address
+				bar and the browser navigates to a corresponding page. Click links
+				on the page and the browser navigates to a new page. Click the
+				browser's back and forward buttons and the browser navigates
+				backward and forward through the history of pages you've seen. :
+			<li>Enter a URL in the address bar and the browser navigates to
+				a corresponding page.</li>
+			<li>Click links on the page and the browser navigates to a new
+				page.</li>
+			<li>Click the browser's back and forward buttons and the browser
+				navigates backward and forward through the history of pages you've
+				seen.</li>
+			</p>
+			<p>The router maps URL-like paths to views instead of pages. When
+				a user performs an action, such as clicking a link, that would load
+				a new page in the browser, the router intercepts the browser's
+				behavior, and shows or hides view hierarchies.</p>
+			<p>If the router determines that the current application state
+				requires particular functionality, and the module that defines it
+				hasn't been loaded, the router can lazy-load the module on demand.</p>
+			<p>The router interprets a link URL according to your
+				application's view navigation rules and data state. You can navigate
+				to new views when the user clicks a button or selects from a drop
+				box, or in response to some other stimulus from any source. The
+				router logs activity in the browser's history, so the back and
+				forward buttons work as well.</p>
+			<p>To define navigation rules, you associate navigation paths
+				with your components. A path uses a URL-like syntax that integrates
+				your program data, in much the same way that template syntax
+				integrates your views with your program data. You can then apply
+				program logic to choose which views to show or to hide, in response
+				to user input and your own access rules.</p>
+		</section>
+	</article>
+	<script type="text/javascript">
+    var searched = localStorage.getItem("myValue");
+	if (searched !== "") {
+    	let text = document.getElementById("title-section").innerHTML;
+    	let re = new RegExp(searched,"gi"); // search for all instances
+  		let newText = text.replace(re, `<mark>${searched}</mark>`);
+  		document.getElementById("title-section").innerHTML = newText;
+    }
+	onbeforeunload = function (e) { localStorage. clear(); };
+    </script>
+</body>
+</html>

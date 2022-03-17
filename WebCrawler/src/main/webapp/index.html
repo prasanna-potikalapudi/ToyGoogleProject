@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>First Page</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+@import
+	url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap")
+	;
+</style>
+</head>
+
+<body>
+	<header>
+		<div class="topnav">
+			<a style='text-decoration: none' href="MainPage.html"><i
+				class="fa fa-home"></i> Home</a> HTML & CSS Basics <img alt="Logo"
+				src="Logo.png"
+				style="width: 150px; float: right; height: 50px; margin-right: 10px;">
+
+		</div>
+	</header>
+	<article>
+		<section id="title-section">
+			<!-- <div class="post-auth">by Ivan Lourenço Gomes | 5 min read</div> -->
+			<h1>Getting started with HTML & CSS</h1>
+			<div class="share uppercase">
+				<span>share the post</span> <img src="Facebook_Icon.png" /> <img
+					src="Linkedin_Icon.png" />
+			</div>
+		</section>
+
+		<section id="hero-image">
+			<img src="img.jpg" />
+		</section>
+
+		<section id="content-section">
+			<p>
+				<strong>HTML</strong> is an acronym of "Hyper Text Markup Language,"
+				which is used for creating web pages and web applications. It is
+				simple to use and has loose syntax. It is nearly established on
+				every website and supported by every browser. It is easy to learn
+				and code. It is free to use and doesn't require any license Getting
+				started with HTML & CSS.
+			</p>
+
+			<p>
+				<b>HyperText</b> simply means the "Text within Text." A text has a
+				link within it, is a hypertext. Whenever we click on a link that
+				brings us to a new web page, we click on a hypertext. HyperText is a
+				way to link two or more web pages (HTML documents) with each other.
+			</p>
+			<p>
+				<b>Markup language </b> is a computer language that is used to apply
+				layout and formatting conventions to a text document. Markup
+				language makes the text more interactive and dynamic. It can turn
+				text into images, tables, links, etc.
+			</p>
+
+			<h2 class="uppercase">Cascading Style Sheet</h2>
+
+			<p>
+				<b>CSS</b> stands for Cascading Style Sheets. It is a style sheet
+				language that describes the look and document's formatting written
+				in the markup language. It helps us to add new looks to our old HTML
+				documents. By making some changes in the CSS code, we can easily
+				change the look of the website. It provides an additional feature to
+				HTML. CSS reduces the work by controlling the layout of multiple web
+				pages. CSS is easy to maintain and has good community support
+				Cascading Style Sheet.
+			</p>
+			<ol>
+				<li>It improves the speed of the website, and pages take less
+					time to load properly.</li>
+				<li>It provides more attributes.</li>
+				<li>Easy to maintain.</li>
+			</ol>
+			<p>Both HTML and CSS are client-side web scripting languages that
+				are used for creating web pages. There are many ways that create the
+				difference between HTML and CSS, such as the implementing methods,
+				their syntactical structure, ease of use, and the features like
+				attributes.</p>
+		</section>
+	</article>
+
+	<footer>
+		<ul>
+			<div class="links-Title uppercase">Related post</div>
+			<li><a href="framework.html">The 3 Most Popular Javascript
+					Frameworks</a></li>
+			<li><a href="blogs.html">Best Front End development blogs</a></li>
+			<li><a href="elements.html">New HTML5 Elements Explained</a></li>
+		</ul>
+	</footer>
+	<script type="text/javascript">
+    var searched = localStorage.getItem("myValue");
+	if (searched !== "") {
+    	let text = document.getElementById("content-section").innerHTML;
+    	let re = new RegExp(searched,"gi"); // search for all instances
+  		let newText = text.replace(re, `<mark>${searched}</mark>`);
+  		document.getElementById("content-section").innerHTML = newText;
+    }
+	
+	onbeforeunload = function (e) { localStorage. clear(); };
+    </script>
+</body>
+</html>

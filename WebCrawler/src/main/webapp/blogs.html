@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blogs</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+@import
+	url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap")
+	;
+</style>
+</head>
+
+<body>
+	<header style='position: fixed; z-index: 100; width: 100%;'>
+		<div class="topnav">
+			<a style='text-decoration: none' href="MainPage.html"><i
+				class="fa fa-home"></i> Home</a> Blogs<img alt="Logo" src="Logo.png"
+				style="width: 150px; float: right; height: 50px; margin-right: 10px;">
+		</div>
+	</header>
+	<article>
+		<section id="title-section">
+			<h1>Best Front End development blogs</h1>
+			<div class="share uppercase">
+				<span>share the post</span> <img src="Facebook_Icon.png" /> <img
+					src="Linkedin_Icon.png" />
+			</div>
+			<h2 class="uppercase">1. Tuts+ Code</h2>
+			<p>Envato tuts is an educational web development blog that
+				contains over 1,220 courses and tutorials along with over 170 ebooks
+				that cover an extensive range of topics from coding and web design,
+				to 3D design and motion graphics Tuts+ Code.</p>
+			<p>The “Guides” section on this web development blog provides
+				plenty of in-depth content about API, accessibility coding,
+				JavaScript, Python and many more. It also features many guides on
+				other aspects of development, such as tools to help improve
+				workflow.</p>
+			<h2 class="uppercase">2. Smashing Magazine</h2>
+			<p>Smashing Magazine is a well-known design and web development
+				blog that contains regularly updated news and opinion content
+				relating to website design, development and UX. They publish new
+				posts everyday about the latest developments in the tech world, so
+				it’s well worth bookmarking this one Smashing Magazine.</p>
+			<p>In terms of coding, you can find many posts relating to HTML,
+				CSS, JavaScript, as well as general web design and developer tools.
+				Their team boasts a host of experienced developers and designers who
+				regularly share their expert knowledge.</p>
+			<h2 class="uppercase">3. SitePoint</h2>
+			<p>SitePoint is great if you’re looking for a web development
+				blog that focuses exclusively on development, programming languages
+				and development tools. If you choose to follow this web development
+				blog, you’ll be getting a report on a new topic of interest in the
+				development world each month SitePoint.</p>
+			<p>You can also subscribe to their daily email newsletters that
+				revolve around the monthly feature topic. And if you’re looking for
+				more than just reading materials, they offer stimulating ebooks,
+				videos and courses for $9 a month.</p>
+			<h2 class="uppercase">4. Hongkiat</h2>
+			<p>If you’re looking for something that varies between being a
+				web development blog but also offers general tech news or something
+				a bit different, then it’s worth giving Hongkiat a try. Here you’ll
+				find everything to do with web development, from checkbox styling
+				with CSS grids to HTML5 Semantics Hongkiat.</p>
+			<p>When you want a break from programming and want to try
+				something different for a few minutes, you’ll also find posts about
+				cryptocurrencies and how to restart iphones. If you’re in any way a
+				techy person, you’ll be sure to find something of interest on this
+				web development blog!</p>
+			<h2 class="uppercase">5. CSS-Tricks</h2>
+			<p>If you want to learn about everything from cross-platform
+				development to tools like Redux, CSS-Tricks has all the guides and
+				tips you need to help you succeed in your career. CSS-Tricks covers
+				all the practical elements of a web developer’s job such as
+				development tools, how to build accessibility features and more
+				CSS-Tricks.</p>
+			<p>What we find particularly helpful about this web development
+				blog is that it even includes an Almanac that acts as a reference
+				guide to all the fundamental features of CSS.</p>
+			<h2 class="uppercase">6. Web Design Ledger</h2>
+			<p>Web Design Ledger is another example of a blog that combines a
+				decent mix of web development and general design topics. Along with
+				providing tutorials and listicles of web development tools, they
+				also post regular articles with news and tips about PHP, JavaScript,
+				jQuery and Node JS Web Design Ledger.</p>
+			<p>They also provide more generalized reading, such as advice for
+				how to create a website, common coding pitfalls (think rewriting
+				code from scratch when it’s not necessary), and choosing a domain
+				name.</p>
+			<h2 class="uppercase">7. A List Apart</h2>
+			<p>A List Apart: as a web development blog, this one could really
+				be considered as apart from the rest. They offer unique, original
+				content and regularly post about everything to do with website
+				design and development. A List Apart covers a diverse range of
+				topics from coding, content, design and even the business side of
+				the tech and web development industry A List Apart.</p>
+			<p>Additionally, they publish a lot of useful tips such as
+				processing data with JavaScript, parsing HTML and even how to
+				enhance website accessibility for screen readers.</p>
+			<h2 class="uppercase">8. Codrops</h2>
+			<p>Looking for a go-to repository of tutorials, quality original
+				blog content and an extensive reference dictionary for CSS? Then
+				look no further than Codrops! This web development blog is a gem of
+				original content about development. These folks provide inspiring
+				prose on creative ways to tackle common coding problems in their
+				“Playground” section. They also provide general web development news
+				Codrops.</p>
+			<p>Furthermore, you’ll find a list of free resources such as
+				plugins and other tutorial websites. You’ll particularly like this
+				web development blog if you’re interested in reading up on CSS and
+				Three Js.</p>
+		</section>
+	</article>
+	<script type="text/javascript">
+		var searched = localStorage.getItem("myValue");
+		if (searched !== "") {
+			let text = document.getElementById("title-section").innerHTML;
+			let re = new RegExp(searched, "gi"); // search for all instances
+			let newText = text.replace(re, `<mark>${searched}</mark>`);
+			document.getElementById("title-section").innerHTML = newText;
+		}
+		onbeforeunload = function (e) { localStorage. clear(); };
+	</script>
+</body>
+</html>
